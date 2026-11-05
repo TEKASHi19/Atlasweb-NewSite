@@ -478,4 +478,25 @@ body{background:#0B0907}
 .journey .scene p.muted{font-size:16px;max-width:320px}
 @media (max-width:1080px){.journey .jnode{top:4px;left:-31px}.mini{height:auto}}
 @media (prefers-reduced-motion: reduce){.jnode{animation:none}}
+
+/* ---------- PROBLEMA: LA FUGA ---------- */
+.funnel{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin-top:84px;border-top:1px solid rgba(255,220,180,.10)}
+.fstage{position:relative;padding:40px 32px 0 0}
+.fstage+.fstage{padding-left:32px;border-left:1px solid rgba(255,220,180,.07)}
+.fstage+.fstage::before{content:'';position:absolute;left:-5px;top:-5px;width:9px;height:9px;border-radius:50%;background:#0B0907;border:1px solid rgba(255,138,76,.55)}
+.dots{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:10px;max-width:220px}
+.d{display:block;aspect-ratio:1;border-radius:50%;background:rgba(255,220,180,.13)}
+.d.on{background:#F4AD32;box-shadow:0 0 10px rgba(244,173,50,.55)}
+.fstage:nth-child(1) .d.on{background:#FFCB70}
+.fstage .d.off{background:rgba(255,220,180,.13);box-shadow:none;position:relative}
+.fstage .d.off::after{content:'';position:absolute;inset:0;border-radius:50%;background:#F4AD32;box-shadow:0 0 10px rgba(244,173,50,.45);opacity:clamp(0,calc(1 - (var(--p) * 2.4 - var(--s) * .4 - var(--k) * .5)),1)}
+.d.lone{background:transparent;box-shadow:inset 0 0 0 1.5px #FF5F1F;animation:lone 2.4s ease-in-out infinite}
+@keyframes lone{0%,100%{box-shadow:inset 0 0 0 1.5px #FF5F1F,0 0 0 0 rgba(255,95,31,.5)}50%{box-shadow:inset 0 0 0 1.5px #FF5F1F,0 0 0 6px rgba(255,95,31,0)}}
+.ftxt{margin-top:34px}
+.ftxt h3{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:21px;letter-spacing:-.02em;margin:0 0 10px;color:#F7F5EF}
+.fstage:nth-child(1) .ftxt h3{color:#FFCB70}
+.ftxt p{margin:0;font-size:15px;line-height:1.6;max-width:240px}
+@media (max-width:1080px){.funnel{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:48px}.fstage:nth-child(3){border-left:0;padding-left:0}.fstage:nth-child(3)::before{display:none}}
+@media (max-width:600px){.funnel{grid-template-columns:1fr}.fstage,.fstage+.fstage{padding:32px 0 0;border-left:0;display:grid;grid-template-columns:120px 1fr;gap:20px;align-items:start}.fstage+.fstage::before{display:none}.fstage+.fstage{border-top:1px solid rgba(255,220,180,.07)}.dots{gap:5px}.ftxt{margin-top:0}}
+@media (prefers-reduced-motion: reduce){.d.lone{animation:none}}
 .fqa[hidden]{display:none}
