@@ -35,9 +35,14 @@
         (v('negocio') ? ' de ' + v('negocio') : '') + '. ' +
         (v('mensaje') || 'Me interesa una página web.') +
         (v('whatsapp') ? ' Mi WhatsApp: ' + v('whatsapp') : '');
-      window.open('https://wa.me/524443180169?text=' + encodeURIComponent(txt), '_blank', 'noopener');
+      var url = 'https://wa.me/524443180169?text=' + encodeURIComponent(txt);
       var sent = form.querySelector('.sent'); var fields = form.querySelector('.fields');
-      if (sent) { sent.textContent = 'Listo, se abrió WhatsApp con tu mensaje. Te respondo en menos de 24 horas.'; sent.hidden = false; }
+      if (sent) {
+        sent.textContent = 'Tu mensaje está listo. ';
+        var a = document.createElement('a'); a.href = url; a.target = '_blank'; a.rel = 'noopener';
+        a.className = 'pill pill-amber'; a.textContent = 'Enviarlo por WhatsApp'; a.style.marginLeft = '12px';
+        sent.appendChild(a); sent.hidden = false;
+      }
       if (fields) { fields.style.display = 'none'; }
     });
   }
