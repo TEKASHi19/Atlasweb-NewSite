@@ -581,4 +581,8 @@ body{background:#0B0907}
 .pshot{display:block;width:100%;aspect-ratio:1350/768;object-fit:cover;object-position:top;border-radius:0 0 12px 12px}
 .pmock{width:92%}
 .ptop h3{font-size:36px}
+
+/* móvil: arco debajo del menú */
+@media (max-width:1080px){.rise,.rise2{top:110px}.haze{top:60px}}
+@media (max-width:600px){.rise,.rise2{top:55px}.haze{top:20px}.hero .sky-shade{background:linear-gradient(180deg,rgba(7,6,5,.85) 0%,rgba(7,6,5,0) 22%,rgba(7,6,5,0) 40%,rgba(7,6,5,.5) 100%)}.hero-body{padding-top:190px}}
 .fqa[hidden]{display:none}
