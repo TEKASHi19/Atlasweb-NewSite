@@ -567,14 +567,13 @@ body{background:#0B0907}
 .pprog i{display:block;height:100%;width:calc(var(--p) * 100%);background:linear-gradient(90deg,#F4AD32,#FF5F1F)}
 @keyframes pfloat{0%,100%{translate:0 0}50%{translate:0 -8px}}
 @media (max-width:900px){
-.pjsticky{gap:28px}
-.ptrack{gap:14px;padding-left:20px;transform:translateX(calc(var(--p) * -1 * (4 * 84vw + 3 * 14px + 40px - 100vw)))}
-.pcard{width:84vw;height:min(470px,64vh);padding:22px}
+.pjpin{height:auto}.pjsticky{position:static;height:auto;padding:90px 0 20px;gap:32px}
+.ptrack-wrap{overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.ptrack{transform:none;padding:0 22px;gap:16px}
+.pcard{width:84vw;height:470px;scroll-snap-align:center;padding:24px}
 .ptop{flex-direction:column;gap:8px}.ptop h3{font-size:30px}.pgiro{text-align:left}
-.pfoot{flex-direction:column;align-items:flex-start;gap:12px}
-.pfoot p{font-size:14px}
-.pj-head2 .h2{font-size:36px}
-.pprog{display:block}
+.pfoot{flex-direction:column;align-items:flex-start;gap:14px}
+.pprog{display:none}
 }
 @media (prefers-reduced-motion: reduce){.pmock{animation:none}}
 .pshot{display:block;width:100%;aspect-ratio:1350/768;object-fit:cover;object-position:top;border-radius:0 0 12px 12px}
