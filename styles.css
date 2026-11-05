@@ -584,5 +584,5 @@ body{background:#0B0907}
 
 /* móvil: arco debajo del menú */
 @media (max-width:1080px){.rise,.rise2{top:110px}.haze{top:60px}}
-@media (max-width:600px){.rise,.rise2{top:55px}.haze{top:20px}.hero .sky-shade{background:linear-gradient(180deg,rgba(7,6,5,.85) 0%,rgba(7,6,5,0) 22%,rgba(7,6,5,0) 40%,rgba(7,6,5,.5) 100%)}.hero-body{padding-top:190px}}
+@media (max-width:600px){.rise,.rise2{top:10px}.haze{top:-20px}.hero .sky-shade{background:linear-gradient(180deg,rgba(7,6,5,.85) 0%,rgba(7,6,5,0) 22%,rgba(7,6,5,0) 40%,rgba(7,6,5,.5) 100%)}.hero-body{padding-top:118px;padding-bottom:28px;justify-content:flex-start}.hero,.hero--low{min-height:0}.h1{font-size:40px;line-height:1.02}.hero-sub{font-size:16px;margin-top:18px;line-height:1.5}.hero-cta{margin-top:24px;gap:16px}.trust{padding-top:8px}}
 .fqa[hidden]{display:none}
