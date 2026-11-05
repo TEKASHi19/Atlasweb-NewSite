@@ -576,4 +576,7 @@ body{background:#0B0907}
 .pprog{display:none}
 }
 @media (prefers-reduced-motion: reduce){.pmock{animation:none}}
+.pshot{display:block;width:100%;aspect-ratio:1350/768;object-fit:cover;object-position:top;border-radius:0 0 12px 12px}
+.pmock{width:92%}
+.ptop h3{font-size:36px}
 .fqa[hidden]{display:none}
