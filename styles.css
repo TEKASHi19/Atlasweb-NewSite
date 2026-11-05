@@ -499,4 +499,17 @@ body{background:#0B0907}
 @media (max-width:1080px){.funnel{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:48px}.fstage:nth-child(3){border-left:0;padding-left:0}.fstage:nth-child(3)::before{display:none}}
 @media (max-width:600px){.funnel{grid-template-columns:1fr}.fstage,.fstage+.fstage{padding:32px 0 0;border-left:0;display:grid;grid-template-columns:120px 1fr;gap:20px;align-items:start}.fstage+.fstage::before{display:none}.fstage+.fstage{border-top:1px solid rgba(255,220,180,.07)}.dots{gap:5px}.ftxt{margin-top:0}}
 @media (prefers-reduced-motion: reduce){.d.lone{animation:none}}
+
+/* ---------- PROBLEMA: LÍNEAS ---------- */
+.lines{margin-top:72px;border-top:1px solid rgba(255,220,180,.09)}
+.lrow{display:flex;justify-content:space-between;align-items:baseline;gap:40px;padding:40px 0;border-bottom:1px solid rgba(255,220,180,.09)}
+.lline{margin:0;font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:44px;line-height:1.15;letter-spacing:-.035em;color:#F7F5EF;max-width:960px}
+.la{position:relative;display:inline-block;white-space:nowrap}
+.squig{position:absolute;left:-2%;bottom:-.18em;width:104%;height:.32em;overflow:visible}
+.squig path{fill:none;stroke:#FF5F1F;stroke-width:2.2;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:calc(1 - clamp(0, var(--p) * 1.7, 1));filter:drop-shadow(0 0 6px rgba(255,95,31,.55))}
+.lb{color:#8F877E;opacity:clamp(0, calc(var(--p) * 2.4 - .9), 1);transition:none;display:inline-block;transform:translateX(calc((1 - clamp(0, calc(var(--p) * 2.4 - .9), 1)) * 18px))}
+.ltag{flex:none;font-size:14px;color:#FF8A4C;white-space:nowrap;display:inline-flex;align-items:center;gap:10px;opacity:clamp(0, calc(var(--p) * 2 - .6), 1)}
+.ltag::before{content:'';width:6px;height:6px;border-radius:50%;background:#FF5F1F;box-shadow:0 0 10px rgba(255,95,31,.8)}
+@media (max-width:1080px){.lrow{flex-direction:column;gap:14px;padding:32px 0}.lline{font-size:30px}.la{white-space:normal}}
+@media (prefers-reduced-motion: reduce){.squig path{stroke-dashoffset:0}.lb,.ltag{opacity:1;transform:none}}
 .fqa[hidden]{display:none}
