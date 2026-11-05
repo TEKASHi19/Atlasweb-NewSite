@@ -391,4 +391,20 @@ body{background:#0B0907}
 .navbar.is-scrolled .navin{max-width:100%;padding:6px 6px 6px 20px}
 .navbar.is-scrolled .navcta{min-height:38px;padding:0 16px;font-size:14px}
 }
+
+/* ---------- CIERRE: MENSAJES LLEGANDO ---------- */
+.chat-sky{position:absolute;left:0;right:0;top:0;height:640px;pointer-events:none;z-index:1;opacity:calc(.2 + .8 * var(--p))}
+.msg{position:absolute;left:var(--x);top:var(--y);display:flex;align-items:flex-end;gap:10px;max-width:260px;padding:11px 14px;border-radius:16px 16px 16px 4px;background:rgba(30,24,19,.82);border:1px solid rgba(255,220,180,.10);box-shadow:0 18px 40px -18px rgba(0,0,0,.9);color:#EDE6DC;font-size:14px;line-height:1.35;text-align:left;opacity:0;animation:msgLife 9s cubic-bezier(.2,.7,.3,1) var(--d) infinite}
+.msg small{font-size:11px;color:#8F877E;white-space:nowrap}
+.msg.out{border-radius:16px 16px 4px 16px;background:rgba(255,95,31,.92);border-color:rgba(255,170,110,.4);color:#1F0A02}
+.msg.out small{color:rgba(31,10,2,.65)}
+.msg.z2{scale:.82;filter:blur(1.2px)}
+.msg.z3{scale:.66;filter:blur(3px)}
+.msg.z3,.msg.z2{animation-name:msgLifeFar}
+@keyframes msgLife{0%{opacity:0;transform:translateY(26px) scale(.92)}8%{opacity:1;transform:translateY(0) scale(1)}70%{opacity:1;transform:translateY(-26px)}100%{opacity:0;transform:translateY(-46px)}}
+@keyframes msgLifeFar{0%{opacity:0;transform:translateY(20px)}10%{opacity:.6}70%{opacity:.6;transform:translateY(-20px)}100%{opacity:0;transform:translateY(-36px)}}
+.cta-floor{background:radial-gradient(ellipse 55% 60% at 50% 100%,rgba(255,95,31,.16),rgba(8,6,5,0) 70%)}
+@media (max-width:1080px){.msg.z3{display:none}.msg{max-width:200px;font-size:12.5px}}
+@media (max-width:600px){.msg.z2,.msg.z3{display:none}.cta .cta-in{padding-top:200px}.chat-sky{height:200px}.msg{max-width:230px}.msg:nth-child(1){left:5%;top:36px}.msg:nth-child(3){left:auto;right:5%;top:112px}}
+@media (prefers-reduced-motion: reduce){.msg{animation:none;opacity:.85}}
 .fqa[hidden]{display:none}
