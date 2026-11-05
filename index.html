@@ -58,7 +58,7 @@
 <section class="light sec glow-l">
 <div class="wrap">
 <h2 class="h2 pb-head statement" data-sc="0.85,0.35" style="--n: 11"><span class="w" style="--i: 0">Tu</span> <span class="w" style="--i: 1">negocio</span> <span class="w" style="--i: 2">es</span> <span class="w" style="--i: 3">bueno.</span> <span class="w" style="--i: 4">Tu</span> <span class="w" style="--i: 5">presencia</span> <span class="w" style="--i: 6">en</span> <span class="w" style="--i: 7">internet</span> <span class="w" style="--i: 8">no</span> <span class="w" style="--i: 9">lo</span> <span class="w" style="--i: 10">dice.</span></h2>
-<div class="lines"><div class="lrow" data-sc="0.82,0.48"><p class="lline"><span class="la">Te buscan en Google<svg class="squig" viewBox="0 0 300 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 9 C 40 3, 70 13, 110 7 S 180 3, 220 8 S 280 11, 298 5" pathLength="1"></path></svg></span> <span class="lb">…y aparece tu competencia.</span></p><span class="ltag">Nadie te encuentra</span></div><div class="lrow" data-sc="0.82,0.48"><p class="lline"><span class="la">Entran a tu página<svg class="squig" viewBox="0 0 300 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 9 C 40 3, 70 13, 110 7 S 180 3, 220 8 S 280 11, 298 5" pathLength="1"></path></svg></span> <span class="lb">…y no carga bien en el celular.</span></p><span class="ltag">Tu página se ve de hace años</span></div><div class="lrow" data-sc="0.82,0.48"><p class="lline"><span class="la">Quieren escribirte<svg class="squig" viewBox="0 0 300 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 9 C 40 3, 70 13, 110 7 S 180 3, 220 8 S 280 11, 298 5" pathLength="1"></path></svg></span> <span class="lb">…y no encuentran cómo.</span></p><span class="ltag">Te visitan, pero no te escriben</span></div></div>
+<div class="flip" id="flip"><div class="flip-sw" role="group" aria-label="Comparar"><button type="button" class="sw-b is-on" data-mode="hoy" aria-pressed="true">Hoy</button><button type="button" class="sw-b" data-mode="atlas" aria-pressed="false">Con Atlas Web</button><span class="sw-thumb" aria-hidden="true"></span></div><div class="flines"><p class="fl"><span class="fa">Te buscan</span> <span class="fb"><span class="f-hoy">y no apareces.</span><span class="f-atl">y te encuentran.</span></span></p><p class="fl"><span class="fa">Entran a tu página</span> <span class="fb"><span class="f-hoy">y tarda en cargar.</span><span class="f-atl">y carga rápido en cualquier celular.</span></span></p><p class="fl"><span class="fa">Quieren escribirte</span> <span class="fb"><span class="f-hoy">y no saben cómo.</span><span class="f-atl">y están a un toque de WhatsApp.</span></span></p></div></div>
 </div>
 </section>
 
@@ -93,45 +93,12 @@
 </div>
 </section>
 
-<section class="dark sec" id="proyectos" style="padding-bottom: 0">
-<div class="wrap">
-<div class="pj-head">
-<h2 class="h2">Proyectos recientes</h2>
-<a class="textlink" href="#proyectos">Ver todos los proyectos</a>
-</div>
-<div class="rows" data-sc="0.95,0.35">
-
-<a class="row" target="_blank" rel="noopener" href="https://gruasslp.com" style="--i: 0">
-<h3>Grúas SLP</h3>
-<div class="meta"><b>Grúas y auxilio vial 24/7</b>Landing con botones directos de llamada y WhatsApp, mapa de cobertura y galería.</div>
-<span class="kind">Cliente</span>
-<span class="peek" aria-hidden="true">[Captura de gruasslp.com]</span>
-</a>
-
-<a class="row" href="#proyectos" style="--i: 1">
-<h3>Enjoy Travel</h3>
-<div class="meta"><b>Bodas y eventos</b>Sitio con panel administrativo para gestionar paquetes y cotizaciones.</div>
-<span class="kind">Cliente</span>
-<span class="peek" aria-hidden="true">[Captura de Enjoy Travel]</span>
-</a>
-
-<a class="row" target="_blank" rel="noopener" href="https://www.archo.com.mx/" style="--i: 2">
-<h3>ARCHO</h3>
-<div class="meta"><b>Constructora y arquitectura</b>Reconstrucción completa del sitio desde cero.</div>
-<span class="kind">Desarrollado en Connect Marketing</span>
-<span class="peek" aria-hidden="true">[Captura de archo.com.mx]</span>
-</a>
-
-<a class="row" target="_blank" rel="noopener" href="https://www.noventis.com.mx/" style="--i: 3">
-<h3>Noventis</h3>
-<div class="meta"><b>Servicios financieros</b>Doble flujo de contacto: agenda de citas y formulario.</div>
-<span class="kind">Desarrollado en Connect Marketing</span>
-<span class="peek" aria-hidden="true">[Captura de noventis.com.mx]</span>
-</a>
-
-</div>
-</div>
-
+<section class="dark sec pjsec" id="proyectos" style="padding-bottom: 0">
+<div class="pjpin" data-sc="0,-2"><div class="pjsticky">
+<div class="wrap pj-head2"><h2 class="h2">Proyectos recientes</h2><a class="textlink" href="#proyectos">Ver todos los proyectos</a></div>
+<div class="ptrack-wrap"><div class="ptrack"><a class="pcard" href="https://gruasslp.com" target="_blank" rel="noopener" style="--c1: #F5B400; --c2: #1A1405; --ink: #1A1405; background: radial-gradient(120% 90% at 85% 10%,rgba(245,180,0,.55),rgba(245,180,0,0) 55%),linear-gradient(160deg,#2A2108,#120E06)"><div class="ptop"><h3>Grúas SLP</h3><span class="pgiro">Grúas y auxilio vial 24/7</span></div><div class="pmock" aria-hidden="true"><div class="pbar"><i></i><i></i><i></i><span>gruasslp.com</span></div><div class="pbody"><div class="ph1"></div><div class="ph2"></div><div class="pbtns"><b></b><b class="g"></b></div><div class="pgrid"><u></u><u></u><u></u></div></div></div><div class="pfoot"><p>Landing con llamada y WhatsApp a un toque, mapa de cobertura y galería.</p><span class="pgo">Ver sitio <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M8 7h9v9"></path></svg></span></div></a><a class="pcard" href="#proyectos" style="--c1: #E8B4A0; --c2: #2A1915; --ink: #2A1915; background: radial-gradient(120% 90% at 15% 0%,rgba(232,180,160,.45),rgba(232,180,160,0) 55%),linear-gradient(160deg,#2B1C18,#130C0A)"><div class="ptop"><h3>Enjoy Travel</h3><span class="pgiro">Bodas y eventos</span></div><div class="pmock" aria-hidden="true"><div class="pbar"><i></i><i></i><i></i><span>enjoytravel</span></div><div class="pbody"><div class="ph1"></div><div class="ph2"></div><div class="pbtns"><b></b><b class="g"></b></div><div class="pgrid"><u></u><u></u><u></u></div></div></div><div class="pfoot"><p>Sitio con panel para administrar paquetes y solicitudes de cotización.</p><span class="pgo">Ver sitio <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M8 7h9v9"></path></svg></span></div></a><a class="pcard" href="https://www.archo.com.mx/" target="_blank" rel="noopener" style="--c1: #E9E6E0; --c2: #151515; --ink: #151515; background: radial-gradient(120% 90% at 80% 100%,rgba(233,230,224,.22),rgba(233,230,224,0) 55%),linear-gradient(160deg,#1E1E1E,#0D0D0D)"><div class="ptop"><h3>ARCHO</h3><span class="pgiro">Constructora y arquitectura</span></div><div class="pmock" aria-hidden="true"><div class="pbar"><i></i><i></i><i></i><span>archo.com.mx</span></div><div class="pbody"><div class="ph1"></div><div class="ph2"></div><div class="pbtns"><b></b><b class="g"></b></div><div class="pgrid"><u></u><u></u><u></u></div></div></div><div class="pfoot"><p>Reconstrucción completa del sitio, de cero, con identidad sobria.</p><span class="pgo">Ver sitio <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M8 7h9v9"></path></svg></span></div></a><a class="pcard" href="https://www.noventis.com.mx/" target="_blank" rel="noopener" style="--c1: #7EA78B; --c2: #07253E; --ink: #07253E; background: radial-gradient(120% 90% at 20% 100%,rgba(126,167,139,.45),rgba(126,167,139,0) 55%),linear-gradient(160deg,#0B2E46,#051826)"><div class="ptop"><h3>Noventis</h3><span class="pgiro">Servicios financieros</span></div><div class="pmock" aria-hidden="true"><div class="pbar"><i></i><i></i><i></i><span>noventis.com.mx</span></div><div class="pbody"><div class="ph1"></div><div class="ph2"></div><div class="pbtns"><b></b><b class="g"></b></div><div class="pgrid"><u></u><u></u><u></u></div></div></div><div class="pfoot"><p>Doble flujo de contacto: agenda de citas y formulario para quien prefiere escribir.</p><span class="pgo">Ver sitio <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M8 7h9v9"></path></svg></span></div></a></div></div>
+<div class="wrap"><div class="pprog" aria-hidden="true"><i></i></div></div>
+</div></div>
 <div class="qwrap"><img class="qbg" src="assets/glowcorner.webp" alt="">
 <div class="wrap quote">
 <figure style="margin: 0">

@@ -166,3 +166,18 @@ function atlasFlares(cv, host) {
   var cv = document.querySelector('canvas.flares');
   if (cv) { atlasFlares(cv, document.querySelector('.hero')); }
 })();
+(function(){
+  var f=document.getElementById('flip'); if(!f) return;
+  var bs=f.querySelectorAll('.sw-b'), th=f.querySelector('.sw-thumb'), auto=true;
+  function set(m){
+    f.classList.toggle('atlas',m==='atlas');
+    bs.forEach(function(b){var on=b.getAttribute('data-mode')===m;b.classList.toggle('is-on',on);b.setAttribute('aria-pressed',on?'true':'false');
+      if(on){th.style.setProperty('--tw',b.offsetWidth+'px');th.style.setProperty('--tx',(b.offsetLeft-5)+'px');}});
+  }
+  bs.forEach(function(b){b.addEventListener('click',function(){auto=false;set(b.getAttribute('data-mode'));});});
+  set('hoy'); window.addEventListener('resize',function(){set(f.classList.contains('atlas')?'atlas':'hoy');});
+  if('IntersectionObserver' in window && !(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)){
+    var io=new IntersectionObserver(function(es){ if(es[0].isIntersecting && auto){ setTimeout(function(){ if(auto) set('atlas'); },600); io.disconnect(); } },{threshold:.15,rootMargin:'0px 0px -10% 0px'});
+    io.observe(f.querySelector('.flines'));
+  }
+})();
