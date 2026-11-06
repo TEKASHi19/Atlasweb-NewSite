@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proyectos | Atlas Web</title>
+<meta name="description" content="Sitios web diseñados y programados a la medida por Atlas Web: negocios de servicios, agencias, constructoras, finanzas y más.">
+<meta name="theme-color" content="#0B0907">
+<meta property="og:title" content="Proyectos | Atlas Web">
+<meta property="og:description" content="Páginas web a la medida, rápidas y hechas para que tus visitas terminen en un mensaje de WhatsApp.">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;family=Instrument+Serif:ital@0;1&amp;display=swap">
+<link rel="stylesheet" href="styles.css">
+
+<style>
+.pf-hero{position:relative;padding-top:190px;padding-bottom:70px}
+.pf-hero::before{content:'';position:absolute;left:50%;top:-1180px;width:1700px;height:1400px;margin-left:-850px;border-radius:50%;background:radial-gradient(closest-side,rgba(7,6,5,0) 92%,rgba(255,200,130,.55) 96%,rgba(244,173,50,.25) 98%,rgba(7,6,5,0) 100%);filter:blur(6px);opacity:.9;pointer-events:none}
+.pf-hero h1{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:clamp(48px,8vw,104px);line-height:.95;letter-spacing:-.05em;margin:0;max-width:900px}
+.pf-hero p{color:#A8A097;font-size:19px;line-height:1.6;max-width:560px;margin:26px 0 0}
+.cases{display:flex;flex-direction:column;gap:120px;padding-top:40px;padding-bottom:140px}
+.case{display:grid;grid-template-columns:1.35fr 1fr;gap:64px;align-items:center}
+.case.flip{grid-template-columns:1fr 1.35fr}
+.case.flip .frame{order:2}
+.frame{position:relative;display:block;border-radius:16px;overflow:hidden;background:#F7F5EF;box-shadow:0 40px 80px -40px rgba(0,0,0,.95),0 0 0 1px rgba(255,255,255,.08);text-decoration:none;transform:perspective(1400px) rotateY(var(--ry,-4deg));transition:transform .8s cubic-bezier(.16,1,.3,1),box-shadow .5s}
+.case.flip .frame{--ry:4deg}
+.frame::after{content:'';position:absolute;inset:auto -10% -40% -10%;height:60%;background:radial-gradient(closest-side,color-mix(in srgb,var(--c) 45%,transparent),transparent);opacity:.0;transition:opacity .6s;pointer-events:none}
+.frame:hover{transform:none;box-shadow:0 50px 90px -40px rgba(0,0,0,1),0 0 0 1px color-mix(in srgb,var(--c) 60%,transparent)}
+.fbar{display:flex;align-items:center;gap:6px;padding:10px 14px;border-bottom:1px solid rgba(0,0,0,.08)}
+.fbar i{width:8px;height:8px;border-radius:50%;background:rgba(0,0,0,.14)}
+.fbar span{margin-left:10px;font-size:12px;color:rgba(0,0,0,.5);background:rgba(0,0,0,.05);padding:3px 12px;border-radius:6px}
+.fimg{aspect-ratio:1350/768;overflow:hidden;background:#0E0B09}
+.fimg img{display:block;width:100%;height:100%;object-fit:cover;object-position:top;transition:transform 1.2s cubic-bezier(.16,1,.3,1)}
+.frame:hover .fimg img{transform:scale(1.03)}
+.ph{width:100%;height:100%;display:grid;place-items:center;background:radial-gradient(70% 90% at 70% 20%,color-mix(in srgb,var(--c) 55%,transparent),transparent 70%),linear-gradient(160deg,#1A1410,#0B0907)}
+.ph span{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:clamp(34px,4vw,56px);letter-spacing:-.04em;color:#F7F5EF;opacity:.9}
+.cinfo{display:flex;flex-direction:column;gap:12px}
+.cdot{width:10px;height:10px;border-radius:50%;background:var(--c);box-shadow:0 0 14px var(--c)}
+.cinfo h2{margin:6px 0 0;font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(36px,4.4vw,58px);line-height:1;letter-spacing:-.045em}
+.cgiro{margin:0;color:var(--c);font-size:15px}
+.cdesc{margin:8px 0 0;color:#C9C2B8;font-size:17px;line-height:1.65;max-width:440px}
+.ctech{margin:4px 0 12px;color:#7D756C;font-size:14px}
+.cinfo .pgo{align-self:flex-start;display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:600;padding:10px 16px;border-radius:99px;background:rgba(255,255,255,.08);color:#F7F5EF;text-decoration:none;transition:background .3s,color .3s}
+.cinfo .pgo:hover{background:#FF5F1F;color:#1F0A02}
+.pf-cta{text-align:center;padding-top:40px;padding-bottom:20px}
+.pf-cta h2{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:clamp(36px,5vw,64px);letter-spacing:-.045em;line-height:1;margin:0}
+.pf-cta p{color:#A8A097;font-size:18px;margin:18px auto 30px;max-width:460px}
+.navlinks a[aria-current="page"]{color:#F7F5EF}
+@media (max-width:900px){.pf-hero{padding-top:170px;padding-bottom:40px}.pf-hero::before{top:-1270px}.case,.case.flip{grid-template-columns:1fr;gap:28px}.case.flip .frame{order:0}.frame,.case.flip .frame{transform:none}.cases{gap:80px}}
+@media (prefers-reduced-motion: reduce){.frame,.fimg img{transition:none}}
+</style>
+</head>
+<body>
+<div class="aw">
+<header class="navbar is-scrolled">
+<nav class="navin" aria-label="Principal">
+<a class="brand" href="/#inicio">Atlas Web</a>
+<div class="navlinks">
+<a href="/#servicios">Servicios</a>
+<a href="/proyectos" aria-current="page">Proyectos</a>
+<a href="/#proceso">Proceso</a>
+<a href="/#preguntas">Preguntas</a>
+</div>
+<a class="pill pill-light navcta" href="https://wa.me/524443180169?text=Hola%20Alex%2C%20me%20interesa%20una%20p%C3%A1gina%20web" target="_blank" rel="noopener">Escríbeme</a>
+</nav>
+</header>
+<main>
+<section class="wrap pf-hero"><h1>Proyectos</h1><p>Sitios diseñados y programados a la medida, cada uno pensado para el negocio y la gente que lo visita.</p></section>
+<section class="wrap cases">
+<article class="case" style="--c: #F5B400"><a class="frame" href="https://gruasslp.com" target="_blank" rel="noopener" aria-label="Abrir Grúas SLP"><div class="fbar"><i></i><i></i><i></i><span>gruasslp.com</span></div><div class="fimg"><img src="assets/p-gruas.webp" alt="Página de inicio de Grúas SLP" loading="lazy"></div></a><div class="cinfo"><span class="cdot" aria-hidden="true"></span><h2>Grúas SLP</h2><p class="cgiro">Grúas y auxilio vial 24/7 · San Luis Potosí</p><p class="cdesc">Landing para un servicio de emergencia: el teléfono y WhatsApp están a un toque desde cualquier punto de la página, con mapa de cobertura y galería de unidades.</p><p class="ctech">HTML · CSS · JavaScript</p><a class="pgo" href="https://gruasslp.com" target="_blank" rel="noopener">Ver sitio <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"></path></svg></a></div></article>
+<article class="case flip" style="--c: #9AA3E8"><a class="frame" href="https://connectmkt.mx" target="_blank" rel="noopener" aria-label="Abrir Connect Marketing"><div class="fbar"><i></i><i></i><i></i><span>connectmkt.mx</span></div><div class="fimg"><img src="assets/p-connect.webp" alt="Página de inicio de Connect Marketing" loading="lazy"></div></a><div class="cinfo"><span class="cdot" aria-hidden="true"></span><h2>Connect Marketing</h2><p class="cgiro">Agencia de marketing</p><p class="cdesc">Sitio bilingüe de la agencia, diseñado primero para celular, con portafolio, servicios y proceso de trabajo.</p><p class="ctech">React · TypeScript · Tailwind</p><a class="pgo" href="https://connectmkt.mx" target="_blank" rel="noopener">Ver sitio <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"></path></svg></a></div></article>
+<article class="case" style="--c: #E9E6E0"><a class="frame" href="https://www.archo.com.mx/" target="_blank" rel="noopener" aria-label="Abrir ARCHO"><div class="fbar"><i></i><i></i><i></i><span>archo.com.mx</span></div><div class="fimg"><img src="assets/p-archo.webp" alt="Página de inicio de ARCHO" loading="lazy"></div></a><div class="cinfo"><span class="cdot" aria-hidden="true"></span><h2>ARCHO</h2><p class="cgiro">Constructora y despacho de arquitectura</p><p class="cdesc">Reconstrucción completa del sitio desde cero, con una identidad sobria donde la obra es la protagonista.</p><p class="ctech">React · TypeScript · Tailwind</p><a class="pgo" href="https://www.archo.com.mx/" target="_blank" rel="noopener">Ver sitio <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"></path></svg></a></div></article>
+<article class="case flip" style="--c: #7EA78B"><a class="frame" href="https://www.noventis.com.mx/" target="_blank" rel="noopener" aria-label="Abrir Noventis"><div class="fbar"><i></i><i></i><i></i><span>noventis.com.mx</span></div><div class="fimg"><img src="assets/p-noventis.webp" alt="Página de inicio de Noventis" loading="lazy"></div></a><div class="cinfo"><span class="cdot" aria-hidden="true"></span><h2>Noventis</h2><p class="cgiro">Servicios financieros corporativos</p><p class="cdesc">Doble flujo de contacto: agenda de diagnóstico con calendario para quien quiere hablar, y formulario para quien prefiere escribir.</p><p class="ctech">React · TypeScript · Tailwind</p><a class="pgo" href="https://www.noventis.com.mx/" target="_blank" rel="noopener">Ver sitio <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"></path></svg></a></div></article>
+<article class="case" style="--c: #E8B4A0"><a class="frame" href="https://indicadoresdegeneroslp.org.mx/enjoy_travel/index.php" target="_blank" rel="noopener" aria-label="Abrir Enjoy Travel"><div class="fbar"><i></i><i></i><i></i><span>enjoytravel</span></div><div class="fimg"><div class="ph" aria-hidden="true"><span>Enjoy Travel</span></div></div></a><div class="cinfo"><span class="cdot" aria-hidden="true"></span><h2>Enjoy Travel</h2><p class="cgiro">Agencia de bodas y eventos · San Luis Potosí</p><p class="cdesc">Sitio con panel administrativo propio: la agencia publica paquetes y recibe solicitudes de cotización desde el navegador, sin depender de nadie.</p><p class="ctech">PHP · MySQL · JavaScript</p><a class="pgo" href="https://indicadoresdegeneroslp.org.mx/enjoy_travel/index.php" target="_blank" rel="noopener">Ver sitio <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"></path></svg></a></div></article>
+<article class="case flip" style="--c: #E0662B"><a class="frame" href="https://tekashi19.github.io/Brasero-website/" target="_blank" rel="noopener" aria-label="Abrir Brasero"><div class="fbar"><i></i><i></i><i></i><span>brasero</span></div><div class="fimg"><div class="ph" aria-hidden="true"><span>Brasero</span></div></div></a><div class="cinfo"><span class="cdot" aria-hidden="true"></span><h2>Brasero</h2><p class="cgiro">Steakhouse · Proyecto conceptual</p><p class="cdesc">Diseño oscuro con acentos cálidos, menú interactivo, galería y sistema de reservaciones.</p><p class="ctech">HTML · CSS · JavaScript</p><a class="pgo" href="https://tekashi19.github.io/Brasero-website/" target="_blank" rel="noopener">Ver sitio <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"></path></svg></a></div></article>
+<article class="case" style="--c: #D4B483"><a class="frame" href="https://tekashi19.github.io/Lumiere-website/" target="_blank" rel="noopener" aria-label="Abrir Lumière"><div class="fbar"><i></i><i></i><i></i><span>lumiere</span></div><div class="fimg"><div class="ph" aria-hidden="true"><span>Lumière</span></div></div></a><div class="cinfo"><span class="cdot" aria-hidden="true"></span><h2>Lumière</h2><p class="cgiro">Bodas de destino · Proyecto conceptual</p><p class="cdesc">Sitio multipágina de estilo luxury noir con galería, preguntas frecuentes y formulario de cotización.</p><p class="ctech">HTML · CSS · JavaScript</p><a class="pgo" href="https://tekashi19.github.io/Lumiere-website/" target="_blank" rel="noopener">Ver sitio <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"></path></svg></a></div></article>
+<article class="case flip" style="--c: #E8D5C4"><a class="frame" href="https://tekashi19.github.io/Magnolia-website/" target="_blank" rel="noopener" aria-label="Abrir Magnolia"><div class="fbar"><i></i><i></i><i></i><span>magnolia</span></div><div class="fimg"><div class="ph" aria-hidden="true"><span>Magnolia</span></div></div></a><div class="cinfo"><span class="cdot" aria-hidden="true"></span><h2>Magnolia</h2><p class="cgiro">Bodas de destino · Proyecto conceptual</p><p class="cdesc">Propuesta minimalista con galería de bodas, servicios y formulario de contacto.</p><p class="ctech">HTML · CSS · JavaScript</p><a class="pgo" href="https://tekashi19.github.io/Magnolia-website/" target="_blank" rel="noopener">Ver sitio <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"></path></svg></a></div></article>
+</section>
+<section class="wrap pf-cta"><h2>¿Tu negocio es el siguiente?</h2><p>Cuéntame qué necesitas y te mando una cotización en menos de 24 horas.</p><a class="pill pill-amber" href="https://wa.me/524443180169?text=Hola%20Alex%2C%20vi%20tus%20proyectos%20y%20me%20interesa%20una%20p%C3%A1gina%20web" target="_blank" rel="noopener">Escríbeme por WhatsApp</a></section>
+</main>
+<footer class="ft">
+<div class="wrap">
+<div class="ftg">
+<div><a class="brand" href="/#inicio">Atlas Web</a><p>Páginas web a la medida. Hecho en San Luis Potosí, trabajo con todo México.</p></div>
+<div class="ftc"><h4>Sitio</h4><a href="/#servicios">Servicios</a><a href="/proyectos">Proyectos</a><a href="/#proceso">Proceso</a><a href="/#preguntas">Preguntas</a></div>
+<div class="ftc"><h4>Contacto</h4><a href="https://wa.me/524443180169?text=Hola%20Alex%2C%20me%20interesa%20una%20p%C3%A1gina%20web" target="_blank" rel="noopener">WhatsApp +52 444 318 0169</a><a href="/#contacto">[correo]</a><a href="/#contacto">[Instagram]</a></div>
+<div class="ftc"><h4>Legal</h4><a href="/#inicio">Aviso de privacidad</a></div>
+</div>
+<div class="copy"><span>© 2026 Atlas Web</span><span>Hecha a la medida. Hecha para vender.</span></div>
+<div class="mark" aria-hidden="true">Atlas Web</div>
+</div>
+</footer>
+</div>
+<script src="main.js" defer></script>
+</body>
+</html>
