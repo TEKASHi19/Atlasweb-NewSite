@@ -35,7 +35,7 @@
         (v('negocio') ? ' de ' + v('negocio') : '') + '. ' +
         (v('mensaje') || 'Me interesa una página web.') +
         (v('whatsapp') ? ' Mi WhatsApp: ' + v('whatsapp') : '');
-      var url = 'https://wa.me/524443180169?text=' + encodeURIComponent(txt);
+      var url = 'https://wa.me/524427190412?text=' + encodeURIComponent(txt);
       var sent = form.querySelector('.sent'); var fields = form.querySelector('.fields');
       if (sent) {
         sent.textContent = 'Tu mensaje está listo. ';
