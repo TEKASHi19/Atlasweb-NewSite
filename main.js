@@ -164,7 +164,9 @@ function atlasFlares(cv, host) {
 }
 
   var cv = document.querySelector('canvas.flares');
-  if (cv) { atlasFlares(cv, document.querySelector('.hero')); }
+  // En celulares y tablets (Safari sobre todo) el canvas animado dentro de capas giradas y escaladas hacía brincar el arco.
+  var ligero = window.matchMedia && matchMedia('(max-width:1080px), (hover:none)').matches;
+  if (cv && !ligero) { atlasFlares(cv, document.querySelector('.hero')); }
 })();
 (function(){
   var f=document.getElementById('flip'); if(!f) return;

@@ -618,3 +618,6 @@ body{background:#0B0907}
 .sys.soft+.sv-grid{margin-top:24px}
 .fqa a{color:inherit;text-decoration:underline}
 @media (max-width:1080px){.ag-grid,.ag-row{grid-template-columns:1fr}.price h3{font-size:28px!important}}
+
+/* Celulares y tablets: el arco entra una vez y se queda quieto (evita brincos en Safari) */
+@media (max-width:1080px), (hover:none){.rise{animation:dawn 1.9s cubic-bezier(.2,.9,.25,1) .1s forwards;will-change:auto}.rise2{display:none}}
